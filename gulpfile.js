@@ -25,7 +25,6 @@ const server = (done) => {
     server: {
       baseDir: 'source'
     },
-    index: "form.html",
     cors: true,
     notify: false,
     ui: false,
