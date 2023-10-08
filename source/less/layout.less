@@ -1,3 +1,24 @@
+.container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media(min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  // @media(min-width: @tablet-width) {
+  //   width: 1440px;
+  // }
+}
+
 .container-inner {
   padding: 0 20px;
+
+  @media(min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  // @media(min-width: @tablet-width) {
+  //   padding: 0 110px;
+  // }
 }

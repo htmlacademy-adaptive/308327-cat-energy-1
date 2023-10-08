@@ -1,11 +1,15 @@
 .promo {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+  }
+
   &::before,
   &::after {
     content: "";
-    width: 320px;
-    height: 302px;
+    width: 100%;
+    min-height: 302px;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,27 +28,60 @@
   }
 }
 
+.promo__title-wrapper {
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+  }
+}
+
 .promo__title,
 .promo__slogan {
   margin: 0;
   font-weight: 400;
+  text-align: center;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+    padding-right: 200px;
+    text-align: start;
+    color: @black;
+  }
 }
 
 .promo__title {
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .promo__slogan {
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__our-product {
+  padding: 10px 0;
+  display: block;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
   color: @white;
   background-color: @green;
@@ -54,20 +91,42 @@
   .list-style();
 }
 
+.promo__product-item {
+  padding: 21px 33px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: auto 1fr;
+  background-color: @basic-grey;
+}
+
+.promo__product-slim-img,
+.promo_product-pro-img {
+  position: absolute;
+}
+
+.promo__product-slim-img {
+  left: 40px;
+}
+
+.promo_product-pro-img {
+  left: 35px;
+}
+
 .promo__product-title {
   margin: 0;
+  margin-bottom: 29px;
+  position: relative;
+  padding-left: 70px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.promo__product-item {
-  background-color: @basic-grey;
-}
-
 .promo__product-description {
+  padding-bottom: 23px;
   margin: 0;
+  margin-bottom: 15px;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;

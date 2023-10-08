@@ -2,19 +2,22 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <div class="container">
       <header class="main-header container-inner">
-        <a class="main-header__logo" href="#" title="Cайт «CAT Energy»">
-          <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
-          <img class="main-header__company-img logo-company" src="img/logo-company.svg" width="118" height="18" alt="Название компании «CAT Energy»">
-        </a>
-        <button class="main-header__menu-btn" type="button">
-          <span class="visually-hidden">Закрыть меню навигации</span>
-        </button>
+        <div class="main-header__menu-container">
+          <a class="main-header__logo" href="#" title="Cайт «CAT Energy»">
+            <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
+            <img class="main-header__company-img logo-company" src="img/logo-company.svg" width="118" height="18" alt="Название компании «CAT Energy»">
+          </a>
+          <button class="main-header__menu-btn" type="button">
+            <span class="visually-hidden">Закрыть меню навигации</span>
+          </button>
+        </div>
         <nav class="main-header__navigation">
           <ul class="main-header__navigation-list">
             <li class="main-header__navigation-item">
@@ -40,6 +43,7 @@
           </div>
           <ul class="promo__product-list">
             <li class="promo__product-item">
+              <img class="promo__product-slim-img" src="img/cat_slim.png" width="50" height="53" alt="Силуэт стройного кота">
               <h2 class="promo__product-title">Похудение</h2>
               <p class="promo__product-description">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
@@ -48,6 +52,7 @@
               <a class="promo__catalog-link" href="#">Каталог SLIM</a>
             </li>
             <li class="promo__product-item">
+              <img class="promo_product-pro-img" src="img/cat_pro.png" width="67" height="50" alt="Силуэт мышечного кота">
               <h2 class="promo__product-title">Набор массы</h2>
               <p class="promo__product-description">
                 Заработать авторитет среди дворовых котов и даже собак?
@@ -90,17 +95,19 @@
             тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
           <table class="example__progress-table">
-            <tr class="example__progress-table-row">
-              <th class="example__progress-table-header">5 кг
-              <th class="example__progress-table-header">60 дней
-            </tr>
-            <tr class="example__progress-table-row">
-              <td class="example__progress-table-data">снижение веса</td>
-              <td class="example__progress-table-data">затрачено времени</td>
-            </tr>
-            <tr class="example__progress-table-row">
-              <th class="example__progress-table-footer" colspan="2">Затраты на питание: 15 000 РУБ.</th>
-            </tr>
+            <tbody class="example__progress-table-body">
+              <tr class="example__progress-table-row">
+                <th class="example__progress-table-header">5 кг
+                <th class="example__progress-table-header">60 дней
+              </tr>
+              <tr class="example__progress-table-row">
+                <td class="example__progress-table-data example__progress-table-data--weight">снижение веса</td>
+                <td class="example__progress-table-data example__progress-table-data--time">затрачено времени</td>
+              </tr>
+              <tr class="example__progress-table-row">
+                <th class="example__progress-table-footer" colspan="2">Затраты на питание: 15 000 РУБ.</th>
+              </tr>
+            </tbody>
           </table>
           <div class="example__slider">
             <img class="example__slider-img" src="img/cat-slider-mobile.png" width="280" height="256" alt="Кот ДО и ПОСЛЕ приёма корма">
