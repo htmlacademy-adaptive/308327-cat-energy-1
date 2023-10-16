@@ -1,8 +1,26 @@
+.find-us {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
 .find-us__address-wrapper {
   padding-top: 26px;
   padding-bottom: 26px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 80px;
+    position: absolute;
+    background-color: @white;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .find-us__address-title {
@@ -12,6 +30,12 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @dark;
+
+  @media (min-width: @tablet-width) {
+    max-width: 163px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .find-us__address {
@@ -20,6 +44,14 @@
   line-height: 20px;
   font-style: normal;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    max-width: 157px;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 20px;
+
+  }
 }
 
 .find-us__address-wrapper {
