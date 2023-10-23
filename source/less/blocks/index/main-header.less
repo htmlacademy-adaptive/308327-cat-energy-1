@@ -132,10 +132,23 @@
     padding-bottom: 12px;
     font-size: 18px;
     line-height: 24px;
+
+    &--current {
+      text-decoration: underline;
+      text-decoration-color: @green;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 8px;
+      text-underline-position: under;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
-    color: @white;
+    color: @dark;
+
+    &--color-white {
+      color: @white;
+      text-decoration-color: @white;
+    }
   }
 }

@@ -9,14 +9,16 @@
 <body class="page__body">
   <div class="container">
     <header class="main-header container-inner">
-      <a class="main-header__logo" href="index.html" title="Cайт «CAT Energy»">
-        <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
-        <img class="main-header__company-img logo-company" src="img/logo-company.svg" width="118" height="18"
-          alt="Название компании «CAT Energy»">
-      </a>
-      <button class="main-header__menu-btn" type="button">
-        <span class="visually-hidden">Закрыть меню навигации</span>
-      </button>
+      <div class="main-header__menu-container">
+        <a class="main-header__logo" href="index.html" title="Cайт «CAT Energy»">
+          <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
+          <img class="main-header__company-img logo-company" src="img/logo-company.svg" width="118" height="18"
+            alt="Название компании «CAT Energy»">
+        </a>
+        <button class="main-header__menu-btn" type="button">
+          <span class="visually-hidden">Закрыть меню навигации</span>
+        </button>
+      </div>
       <nav class="main-header__navigation">
         <ul class="main-header__navigation-list">
           <li class="main-header__navigation-item">
@@ -54,7 +56,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="program__form-fieldset">
+          <fieldset class="program__form-fieldset program__form-fieldset--program">
             <legend class="visually-hidden">Выбор программы:</legend>
             <ul class="program__program-list">
               <li class="program__program-item">
@@ -71,7 +73,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="program__form-fieldset">
+          <fieldset class="program__form-fieldset program__form-fieldset--contact">
             <legend class="program__form-legend">Контактные данные (владельца кота)</legend>
             <ul class="program__contact-list">
               <li class="program__contact-item">
@@ -84,11 +86,13 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="program__form-fieldset">
+          <fieldset class="program__form-fieldset program__form-fieldset--comment">
             <legend class="program__form-legend">Комментарий</legend>
-            <textarea class="program__form-textarea" name="coment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="program__form-textarea-container">
+              <textarea class="program__form-textarea" name="coment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
-          <fieldset class="program__form-fieldset">
+          <fieldset class="program__form-fieldset program__form-fieldset--add-something">
             <legend class="program__form-legend">Дополнительно</legend>
             <ul class="program__add-list">
               <li class="program__add-item">
@@ -109,8 +113,10 @@
               </li>
             </ul>
           </fieldset>
-          <button class="program__form-btn order-btn" type="submit">Отправить заявку</button>
-          <p class="program__required-field">* — Обязательные поля</p>
+          <div class="program__form-btn-container">
+            <button class="program__form-btn order-btn" type="submit">Отправить заявку</button>
+            <p class="program__required-field">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
       <section class="find-us">
