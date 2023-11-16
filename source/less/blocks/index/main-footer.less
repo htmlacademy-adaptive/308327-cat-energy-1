@@ -1,10 +1,13 @@
 .main-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: @basic-grey;
+}
+
+.main-footer__container-inner {
+  padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
   @media (min-width: @tablet-width) {
     padding-top: 62px;
@@ -21,6 +24,15 @@
 
 .main-footer__company-link {
   margin-bottom: 20px;
+
+  &:hover .main-footer__company-img path,
+  &:focus .main-footer__company-img path{
+    fill: @dark-hover;
+  }
+
+  &:active .main-footer__company-img path{
+    fill: @dark-active;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -54,6 +66,16 @@
   display: flex;
   height: 100%;
   align-items: center;
+
+  &:hover .main-footer__socials-img path,
+  &:focus .main-footer__socials-img path,
+  &:active .main-footer__socials-img path {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__copyright {
@@ -61,6 +83,16 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+
+  &:hover .main-footer__copyright-logo path,
+  &:focus .main-footer__copyright-logo path,
+  &:active .main-footer__copyright-logo path {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
