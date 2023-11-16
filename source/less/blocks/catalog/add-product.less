@@ -3,7 +3,7 @@
   padding-bottom: 35px;
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     height: 2px;
     background-color: @green;
@@ -11,7 +11,7 @@
   }
 
   @media (max-width: @mobile-width-only) {
-    &:before {
+    &::before {
       width: 54px;
       top: 35px;
       right: 0;
@@ -19,7 +19,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    &:before {
+    &::before {
       width: 100%;
       top: 45px;
       left: 0;
@@ -263,7 +263,7 @@
     padding-left: 344px;
     text-align: left;
 
-     &::before {
+    &::before {
       content: url("../img/icon-gift.svg");
       width: 80px;
       height: 82px;
