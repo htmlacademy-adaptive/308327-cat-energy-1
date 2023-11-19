@@ -60,6 +60,8 @@
   @media (max-width: @mobile-width-only) {
     padding-top: 20px;
     padding-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
 
     &::before {
       content: "";
@@ -132,13 +134,17 @@
 }
 
 .catalog__product-img-link {
-  width: 50%;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 25px 22px;
+    padding: 10px 20px 24px;
     position: absolute;
-    top: 0;
+    top: -52px;
   }
+}
+
+.catalog__product-img {
+  width: 100%;
 }
 
 .catalog__product-table {

@@ -1,6 +1,6 @@
-let mainNav = document.querySelector('.main-header__navigation');
-let menuButton = document.querySelector('.main-header__menu-btn');
-let mainNavList = document.querySelector('.main-header__navigation-list');
+const mainNav = document.querySelector('.main-header__navigation');
+const menuButton = document.querySelector('.main-header__menu-btn');
+const mainNavList = document.querySelector('.main-header__navigation-list');
 
 mainNav.classList.remove('main-header__navigation--nojs');
 mainNavList.classList.remove('main-header__navigation-list--nojs');
