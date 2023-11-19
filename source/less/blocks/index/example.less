@@ -62,6 +62,7 @@
 }
 
 .example__progress-table {
+  display: block;
   margin-bottom: 20px;
   width: 100%;
 
@@ -78,12 +79,13 @@
 .example__progress-table-body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 32px;
+  column-gap: 25px;
 
   @media (min-width: @tablet-width) {
     column-gap: unset;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
   }
 }
 
@@ -115,12 +117,12 @@
 
 .example__progress-table-header {
   padding: 0;
-  padding-top: 14px;
-  padding-bottom: 18px;
+  padding-top: 13px;
+  padding-bottom: 17px;
   min-width: 124px;
   font-size: 24px;
   font-weight: 400;
-  border: 1px solid @light-telegrey;
+  outline: 1px solid @light-telegrey;
   border-radius: 3px;
 
   @media (min-width: @tablet-width) {
@@ -149,16 +151,33 @@
 
 .example__progress-table-data--weight,
 .example__progress-table-data--time {
-  min-width: 81px;
-  position: absolute;
-  bottom: -10px;
-  left: 20px;
   background-color: @grey;
+  position: absolute;
+  left: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 87px;
+    bottom: -10px;
+    letter-spacing: 0.4px;
+  }
 
   @media (min-width: @tablet-width) {
-    min-width: 114px;
     bottom: -4px;
     background-color: @white;
+  }
+}
+
+.example__progress-table-data--weight {
+  @media (min-width: @tablet-width) {
+    width: 114px;
+    left: 24px;
+  }
+}
+
+.example__progress-table-data--time {
+  @media (min-width: @tablet-width) {
+    width: 142px;
+    left: 12px;
   }
 }
 

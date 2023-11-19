@@ -37,11 +37,13 @@
   row-gap: 20px;
 
   @media (min-width: @tablet-width) {
+    padding-right: 75px;
     row-gap: 37px;
-    column-gap: 137px;
+    column-gap: 133px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 110px;
     row-gap: 20px;
@@ -51,20 +53,8 @@
 .features__item {
   grid-column: ~"1 / -1";
 
-  ::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: @green;
-  }
-
   @media (min-width: @tablet-width) {
-    &::before {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 31px;
-    }
+    max-width: 250px;
 
     &:nth-child(2n-1) {
       grid-column: ~"1 / 2";
@@ -106,10 +96,81 @@
   line-height: 18px;
   color: @dark-grey;
 
+  &::before {
+    content: "";
+    display: block;
+    padding: 30px;
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before {
+    background-image: url("/img/features-leaf.svg");
+  }
+
+  &--water::before {
+    background-image: url("/img/features-water.svg");
+  }
+
+  &--eat::before {
+    background-image: url("/img/features-eat.svg");
+  }
+
+  &--clock::before {
+    background-image: url("/img/features-clock.svg");
+  }
+
   @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 57px;
     display: flex;
     flex-direction: column;
     font-size: 16px;
     line-height: 24px;
+    position: relative;
+
+    &::before {
+      padding: 40px;
+      margin-bottom: 31px;
+      width: 80px;
+    }
+
+    &::after {
+      content: "";
+      height: 280px;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+
+    &--leaf::after {
+      width: 112px;
+      background-image: url("/img/features-1.svg");
+      right: 35px;
+    }
+
+    &--water::after {
+      width: 134px;
+      background-image: url("/img/features-2.svg");
+    }
+
+    &--eat::after {
+      width: 134px;
+      background-image: url("/img/features-3.svg");
+    }
+
+    &--clock::after {
+      width: 136px;
+      background-image: url("/img/features-4.svg");
+    }
+  }
+}
+
+.features__word-wrap {
+  @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }
