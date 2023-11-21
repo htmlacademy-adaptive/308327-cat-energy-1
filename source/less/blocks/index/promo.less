@@ -1,5 +1,6 @@
 .promo {
   position: relative;
+  z-index: 1;
 
   &::before,
   &::after {
@@ -9,18 +10,31 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 
   &::before {
-    background-image: url("../img/index-cat-background.jpg");
+    background-image: url("../img/promo-cat-mobile.jpg");
     background-repeat: no-repeat;
     z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-cat-mobile@2x.jpg");
+      background-size: cover;
+    }
   }
 
   &::after {
     background-color: @green;
     opacity: 0.85;
-    z-index: -1;
+    z-index: -2;
   }
 
   @media (min-width: @tablet-width) {
@@ -39,7 +53,12 @@
     }
 
     &::before {
-      background-image: url("../img/index-cat-background-desktop.jpg");
+      background-image: url("../img/promo-cat-desktop.jpg");
+      background-size: 720px auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-cat-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -51,33 +70,10 @@
   @media (min-width: @tablet-width) {
     padding: 65px 200px 526px 90px;
     position: relative;
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 609px;
-      background-image: url("/img/index-can-tablet.png");
-      background-repeat: no-repeat;
-      background-position: -30px 0;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 110px 720px 184px 80px;
-
-    &::after {
-      content: "";
-      width: 552px;
-      height: 499px;
-      background-image: url("/img/index-can-desktop.png");
-      background-position: 0 0;
-      left: 447px;
-      top: 0;
-      bottom: unset;
-    }
   }
 }
 
@@ -121,7 +117,15 @@
 
 .promo__product-img {
   @media (min-width: @tablet-width) {
-    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 447px;
+    bottom: 52px;
   }
 }
 
@@ -186,7 +190,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 41px 65px 59px 52px;
-    align-items: center;
+    column-gap: 80px;
 
     &:nth-child(2n-1) {
       grid-column: ~"1 / 2";
@@ -198,40 +202,76 @@
   }
 }
 
-.promo__product-slim-img,
-.promo_product-pro-img {
+.promo__product-img-wrapper {
+  width: 50px;
+  height: 50px;
   position: absolute;
+  border-radius: 50%;
+  background-color: @green;
 
   @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
     position: static;
     grid-column: ~"2 / -1";
-    grid-row: ~"1 / -1";
+    grid-row: ~"1 / 4";
     justify-self: center;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: ~"1 / 2";
     margin-bottom: 39px;
+    width: 100px;
+    height: 100px;
+    grid-column: ~"1 / 2";
+    justify-self: start;
   }
 }
 
+.promo__product-slim-img,
+.promo_product-pro-img {
+  position: relative;
+}
+
 .promo__product-slim-img {
-  left: 40px;
+  top: -3px;
+  left: 7px;
+
+  @media (min-width: @tablet-width) {
+    top: -11px;
+    left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -6px;
+    left: 15px;
+  }
 }
 
 .promo_product-pro-img {
-  left: 35px;
+  max-width: 268px;
+  top: 11px;
+  left: -9px;
+
+  @media (min-width: @tablet-width) {
+    top: 44px;
+    left: -34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    left: -19px;
+  }
 }
 
 .promo__product-title {
   margin: 0;
   margin-bottom: 29px;
-  position: relative;
   padding-left: 70px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     grid-column: ~"1 / 2";
@@ -243,8 +283,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: ~"2 / -1";
     margin: 0;
+    margin-top: 30px;
+    margin-left: 162px;
+    grid-column: ~"1 / -1";
+    grid-row: ~"1 / 4";
   }
 }
 
@@ -289,7 +332,7 @@
     content: "";
     width: 24px;
     height: 12px;
-    background-image: url("/img/catalog-link-arrow-s.svg");
+    background-image: url("../img/catalog-link-arrow-s.svg");
     background-repeat: no-repeat;
     position: absolute;
     right: 8px;
@@ -297,7 +340,7 @@
 
   &:hover::after {
     width: 32px;
-    background-image: url("/img/catalog-link-arrow.svg");
+    background-image: url("../img/catalog-link-arrow.svg");
     right: 0;
   }
 
