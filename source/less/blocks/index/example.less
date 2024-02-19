@@ -314,19 +314,20 @@
       outline-color: @green;
     }
 
-    .example__slider-toggle-img path {
+    .example__slider-toggle-img {
       fill: @green;
     }
   }
 
   &:active {
     background-color: @slider-active;
+    opacity: 0.6;
 
     .example__slider-toggle {
       outline-color: @slider-active;
     }
 
-    .example__slider-toggle-img path {
+    .example__slider-toggle-img {
       fill: @slider-active;
     }
   }
@@ -347,4 +348,5 @@
   position: absolute;
   top: 11px;
   left: 8px;
+  fill: @slider-curtain;
 }

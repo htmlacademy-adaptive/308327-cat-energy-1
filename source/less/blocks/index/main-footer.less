@@ -25,18 +25,22 @@
 .main-footer__company-link {
   margin-bottom: 20px;
 
-  &:hover .main-footer__company-img path,
-  &:focus .main-footer__company-img path {
+  &:hover .main-footer__company-img,
+  &:focus .main-footer__company-img {
     fill: @dark-hover;
   }
 
-  &:active .main-footer__company-img path {
+  &:active .main-footer__company-img {
     fill: @dark-active;
   }
 
   @media (min-width: @tablet-width) {
     margin: 0;
   }
+}
+
+.main-footer__company-img {
+  fill: @dark;
 }
 
 .main-footer__socials-list {
@@ -67,9 +71,9 @@
   height: 100%;
   align-items: center;
 
-  &:hover .main-footer__socials-img path,
-  &:focus .main-footer__socials-img path,
-  &:active .main-footer__socials-img path {
+  &:hover .main-footer__socials-img,
+  &:focus .main-footer__socials-img,
+  &:active .main-footer__socials-img {
     fill: @green;
   }
 
@@ -78,15 +82,20 @@
   }
 }
 
+.main-footer__socials-img,
+.main-footer__copyright-logo {
+  fill: @slider-curtain;
+}
+
 .main-footer__copyright {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 
-  &:hover .main-footer__copyright-logo path,
-  &:focus .main-footer__copyright-logo path,
-  &:active .main-footer__copyright-logo path {
+  &:hover .main-footer__copyright-logo,
+  &:focus .main-footer__copyright-logo,
+  &:active .main-footer__copyright-logo {
     fill: @green;
   }
 
