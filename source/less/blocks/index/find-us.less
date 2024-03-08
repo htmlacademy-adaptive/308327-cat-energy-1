@@ -24,6 +24,7 @@
     background-color: @white;
     top: 95px;
     left: 110px;
+    z-index: 1;
   }
 }
 
@@ -57,13 +58,14 @@
   }
 }
 
-.find-us__map-img {
-  width: 100%;
-  display: none;
+.find-us__map-wrapper {
+  position: relative;
 }
 
-.find-us__map-wrapper {
-  display: flex;
+.find-us__map-img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .find-us__location {

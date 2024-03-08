@@ -258,19 +258,31 @@
 
   &::before {
     width: 50%;
-    background-image: url("../img/example-fat-cat@1x.png");
+    background-image: image-set(
+      url("../img/example-fat-cat@1x.webp"),
+      url("../img/example-fat-cat@1x.png")
+    );
     background-position: left;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/example-fat-cat@2x.png");
+      background-image: image-set(
+        url("../img/example-fat-cat@2x.webp"),
+        url("../img/example-fat-cat@2x.png")
+      );
       background-size: cover;
     }
 
     @media (min-width: @tablet-width) {
-      background-image: url("../img/example-fat-cat-2@1x.png");
+      background-image: image-set(
+        url("../img/example-fat-cat-2@1x.webp"),
+        url("../img/example-fat-cat-2@1x.png")
+      );
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/example-fat-cat-2@2x.png");
+        background-image: image-set(
+          url("../img/example-fat-cat-2@2x.png"),
+          url("../img/example-fat-cat-2@2x.webp")
+        );
         background-size: cover;
       }
     }
@@ -278,20 +290,32 @@
 
   &::after {
     width: 50%;
-    background-image: url("../img/example-slim-cat@1x.png");
+    background-image: image-set(
+      url("../img/example-slim-cat@1x.webp"),
+      url("../img/example-slim-cat@1x.png")
+    );
     right: 0;
     background-position: right;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/example-slim-cat@2x.png");
+      background-image: image-set(
+        url("../img/example-slim-cat@2x.webp"),
+        url("../img/example-slim-cat@2x.png")
+      );
       background-size: cover;
     }
 
     @media (min-width: @tablet-width) {
-      background-image: url("../img/example-slim-cat-2@1x.png");
+      background-image: image-set(
+        url("../img/example-slim-cat-2@1x.webp"),
+        url("../img/example-slim-cat-2@1x.png")
+      );
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/example-slim-cat-2@2x.png");
+        background-image: image-set(
+          url("../img/example-slim-cat-2@2x.webp"),
+          url("../img/example-slim-cat-2@2x.png")
+        );
         background-size: cover;
       }
     }
