@@ -21,12 +21,18 @@
   }
 
   &::before {
-    background-image: url("../img/promo-cat-mobile.jpg");
+    background-image: image-set(
+      url("../img/promo-cat-mobile.webp"),
+      url("../img/promo-cat-mobile.jpg")
+    );
     background-repeat: no-repeat;
     z-index: -2;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-cat-mobile@2x.jpg");
+      background-image: image-set(
+        url("../img/promo-cat-mobile@2x.webp"),
+        url("../img/promo-cat-mobile@2x.jpg")
+      );
       background-size: cover;
     }
   }
@@ -53,11 +59,17 @@
     }
 
     &::before {
-      background-image: url("../img/promo-cat-desktop.jpg");
+      background-image: image-set(
+        url("../img/promo-cat-desktop.jpg"),
+        url("../img/promo-cat-desktop.webp")
+      );
       background-size: 720px auto;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/promo-cat-desktop@2x.jpg");
+        background-image: image-set(
+          url("../img/promo-cat-desktop@2x.jpg"),
+          url("../img/promo-cat-desktop@2x.webp")
+        );
       }
     }
   }

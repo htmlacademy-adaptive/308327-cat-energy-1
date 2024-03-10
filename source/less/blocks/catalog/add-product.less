@@ -211,13 +211,19 @@
   }
 
   &::before {
-    background-image: url("../img/add-product-cat-back.png");
+    background-image: image-set(
+      url("../img/add-product-cat-back.webp"),
+      url("../img/add-product-cat-back.png")
+    );
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -2;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/add-product-cat-back@2x.png");
+      background-image: image-set(
+        url("../img/add-product-cat-back@2x.webp"),
+        url("../img/add-product-cat-back@2x.png")
+      );
     }
   }
 
@@ -231,10 +237,16 @@
     padding: 57px 125px 60px 78px;
 
     &::before {
-      background-image: url("../img/add-product-cat-back-2.png");
+      background-image: image-set(
+        url("../img/add-product-cat-back-2.webp"),
+        url("../img/add-product-cat-back-2.png")
+      );
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/add-product-cat-back-2@2x.png");
+        background-image: image-set(
+          url("../img/add-product-cat-back-2@2x.webp"),
+          url("../img/add-product-cat-back-2@2x.png")
+        );
       }
     }
   }
@@ -243,10 +255,16 @@
     padding: 56px 41px 43px 42px;
 
     &::before {
-      background-image: url("../img/add-product-cat-back-3.png");
+      background-image: image-set(
+        url("../img/add-product-cat-back-3.webp"),
+        url("../img/add-product-cat-back-3.png")
+      );
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/add-product-cat-back-3@2x.png");
+        background-image: image-set(
+          url("../img/add-product-cat-back-3@2x.webp"),
+          url("../img/add-product-cat-back-3@2x.png")
+        );
       }
     }
   }

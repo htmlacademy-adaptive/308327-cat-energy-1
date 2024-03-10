@@ -8,6 +8,9 @@
     <link rel="apple-touch-icon" href="img/favicons/icon-180.png">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -53,10 +56,10 @@
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop.webp, img/index-can-desktop@2x.webp 2x" width="552" height="499">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp, img/index-can-tablet@2x.webp 2x" width="709" height="609">
-              <source type="image/webp" srcset="img/index-can-mobile.webp, img/index-can-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile.webp, img/index-can-mobile@2x.webp 2x" width="280" height="270">
               <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x" width="552" height="499">
               <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x" width="709" height="609">
-              <img class="promo__product-img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Продукт Cat Energy Pro со вкусом курицы">
+              <img class="promo__product-img" src="img/index-can-mobile.png" srcset="img/index-can-mobile.png 1x, img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Продукт Cat Energy Pro со вкусом курицы">
             </picture>
             <a class="promo__our-product" href="catalog.html">Подобрать программу</a>
           </div>
@@ -148,10 +151,10 @@
             <div class="example__slider page__container-inner">
               <div class="example__slider-inner">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slider-tablet.webp" width="560" height="512">
-                  <source type="image/webp" srcset="img/cat-slider-mobile.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slider-tablet.webp 1x, img/cat-slider-tablet@2x.webp 2x" width="560" height="512">
+                  <source type="image/webp" srcset="img/cat-slider-mobile.webp 1x, img/cat-slider-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png" width="560" height="512">
-                  <img class="visually-hidden" src="img/cat-slider-mobile.png" width="280" height="256" alt="Кот ДО и ПОСЛЕ приёма корма">
+                  <img class="visually-hidden" src="img/cat-slider-mobile.png" width="280" height="256" alt="Кот ДО и ПОСЛЕ приёма корма" loading="lazy">
                 </picture>
                 <div class="example__slider-curtain">
                   <div class="example__slider-toggle">
@@ -171,15 +174,20 @@
             <address class="find-us__address">ул. Большая Конюшенная, д 19/8 Санкт-Петербург</address>
           </div>
           <div class="find-us__map-wrapper">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-              <img class="find-us__map-img" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="362" alt="Местоположение на карте">
-            </picture>
             <iframe class="find-us__location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5935846620862!2d30.320842622157315!3d59.93888576650249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1694534196035!5m2!1sru!2sru"
-              width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+              width="320" height="362" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
             </iframe>
+            <noscript>
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="400">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+                <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="320" height="362">
+                <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x" width="1440" height="400">
+                <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="400">
+                <img class="find-us__map-img" src="img/map-mobile.jpg" srcset="img/map-mobile.jpg 1x, img/map-mobile@2x.jpg 2x" width="320" height="362" alt="Местоположение на карте" loading="lazy">
+              </picture>
+            </noscript>
           </div>
         </section>
       </main>
@@ -229,6 +237,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

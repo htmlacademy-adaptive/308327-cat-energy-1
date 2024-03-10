@@ -42,6 +42,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
+  .pipe(rename('script.min.js'))
   .pipe(gulp.dest('build/js'));
 }
 
@@ -62,7 +63,7 @@ const copyImages = () => {
 
 const createWebp = () => {
   return gulp.src([
-    'source/img/**/*.png',
+    'source/img/**/*.{jpg,png}',
     '!source/img/favicons/*.png'
   ])
   .pipe(squoosh({
@@ -158,6 +159,10 @@ export const build = gulp.series(
     scripts,
     sprite,
     createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
   )
 );
 
