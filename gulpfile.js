@@ -159,10 +159,6 @@ export const build = gulp.series(
     scripts,
     sprite,
     createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
   )
 );
 
@@ -171,13 +167,13 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  copyImages,
-  sprite,
+  optimizeImages,
+  optimizeSvg,
   gulp.parallel(
     styles,
     html,
     scripts,
-    optimizeSvg,
+    sprite,
     createWebp
   ),
   gulp.series(
