@@ -10,20 +10,19 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 62px;
+    padding-top: 57px;
     padding-bottom: 61px;
     flex-direction: row;
-    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 66px;
-    padding-bottom: 66px;
+    padding-top: 67px;
+    padding-bottom: 68px;
   }
 }
 
 .main-footer__company-link {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   &:hover .main-footer__company-img,
   &:focus .main-footer__company-img {
@@ -36,6 +35,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    padding-top: 5px;
   }
 }
 
@@ -45,25 +45,41 @@
 
 .main-footer__socials-list {
   .list-style();
-  padding: 20px 74px;
-  margin-bottom: 20px;
   display: flex;
   width: 100%;
-  justify-content: space-between;
   flex-wrap: wrap;
-  border-top: 1px solid @light-grey;
-  border-bottom: 1px solid @light-grey;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 20px 78px 19px 75px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    border-top: 1px solid @light-grey;
+    border-bottom: 1px solid @light-grey;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin: 0;
-    max-width: 132px;
-    border: none;
+    margin: 0 auto 0 162px;
+    max-width: 135px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 2px;
+    margin-left: 417px;
   }
 }
 
 .main-footer__socials-item {
   height: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    margin-right: 25px;
+
+    &:nth-child(3n) {
+      margin: 0;
+    }
+  }
 }
 
 .main-footer__socials-link {
@@ -79,6 +95,23 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.main-footer__socials-link--youtube {
+  @media (max-width: @mobile-width-only) {
+    padding-right: 4px;
+  }
+}
+
+.main-footer__socials-link--telegram {
+  @media (max-width: @mobile-width-only) {
+    padding-top: 1px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 2px;
+    padding-left: 1px;
   }
 }
 
@@ -105,7 +138,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    max-width: 168px;
+    max-width: 162px;
   }
 }
 

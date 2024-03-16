@@ -15,11 +15,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 60px 70px;
+    padding: 61px 70px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 80px;
+    padding: 61px 77px 59px 80px;
     position: absolute;
     background-color: @white;
     top: 95px;
@@ -55,6 +55,19 @@
     margin-left: auto;
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 47px;
+    text-align: left;
+  }
+}
+
+.find-us__address-city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 19px;
   }
 }
 

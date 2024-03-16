@@ -81,7 +81,7 @@ const optimizeSvg = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
   .pipe(svgo())
   .pipe(cheerio({

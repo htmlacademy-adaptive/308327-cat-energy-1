@@ -1,5 +1,5 @@
 .add-product {
-  padding-top: 21px;
+  padding-top: 26px;
   padding-bottom: 35px;
   position: relative;
 
@@ -13,24 +13,31 @@
   @media (max-width: @mobile-width-only) {
     &::before {
       width: 54px;
-      top: 35px;
+      top: 41px;
       right: 0;
     }
   }
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 75px;
+
     &::before {
       width: 100%;
-      top: 45px;
+      top: 48px;
       left: 0;
       z-index: -1;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 87px;
     display: grid;
     grid-template-columns: 1fr 20%;
-    column-gap: 80px;
+    column-gap: 82px;
+
+    &::before {
+      top: 49px;
+    }
   }
 }
 
@@ -42,7 +49,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 40px;
-    margin-bottom: 80px;
+    margin-bottom: 81px;
     width: 419px;
     font-size: 36px;
     line-height: 36px;
@@ -51,13 +58,17 @@
 
   @media (min-width: @desktop-width) {
     margin-left: -40px;
+    margin-bottom: 80px;
     grid-column: 1 / -1;
   }
 }
 
 .add-product__product-list {
   .list-style();
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 70px;
@@ -76,10 +87,13 @@
   padding-bottom: 19px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid @light-telegrey;
+  box-shadow: 0 -1px 0 0 @light-telegrey;
 
   &:last-child {
-    border-bottom: 1px solid @light-telegrey;
+    @media (max-width: @mobile-width-only) {
+      padding-bottom: 18px;
+    }
+    box-shadow: 0 -1px 0 0 @light-telegrey, 0 1px 0 0 @light-telegrey;
   }
 
   @media (min-width: @tablet-width) {
@@ -87,11 +101,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 14px 0 16px;
+    padding: 15px 0 17px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
 }
 
@@ -100,12 +114,13 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     flex-direction: row;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 2px;
     margin: 0;
     width: 100%;
   }
@@ -129,6 +144,11 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 245px;
+    word-wrap: break-word;
+  }
 }
 
 .add-product__product-table-row {
@@ -137,30 +157,46 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
+    padding-top: 3px;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 285px;
   }
 }
 
 .add-product__product-table-row--sugar {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-top: 2px;
     min-width: 223px;
   }
 }
 
 .add-product__product-table-row--water {
-  @media (min-width: @tablet-width) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     min-width: 160px;
+  }
+
+  .add-product__product-table-cost {
+    @media (min-width: @desktop-width) {
+      padding-right: 10px;
+    }
   }
 }
 
 .add-product__product-table-row--milk {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     min-width: 141px;
   }
 }
 
 .add-product__product-table-row--vitamins {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     min-width: 216px;
   }
 }
@@ -197,7 +233,7 @@
 }
 
 .add-product__present {
-  padding: 41px 61px 43px 58px;
+  padding: 58px 61px 43px 58px;
   position: relative;
 
   &::before,
@@ -234,7 +270,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 57px 125px 60px 78px;
+    padding: 57px 120px 69px 79px;
 
     &::before {
       background-image: image-set(
@@ -272,7 +308,7 @@
 
 .add-product__present-description {
   margin: 0;
-  padding-top: 126px;
+  padding-top: 129px;
   font-family: "Lato", "Arial", sans-serif;
   line-height: 20px;
   font-weight: 400;
@@ -286,17 +322,16 @@
     height: 80px;
     position: absolute;
     top: 0;
+    left: 43px;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0;
-    padding-left: 344px;
+    padding: 14px 0 0 344px;
     text-align: left;
 
     &::before {
-      content: url("../img/icon-gift.svg");
       width: 80px;
-      height: 82px;
+      height: 83px;
       left: 0;
     }
   }
@@ -310,7 +345,7 @@
       content: url("../img/icon-gift.svg");
       width: 78px;
       height: 80px;
-      left: unset;
+      left: 42px;
     }
   }
 }
