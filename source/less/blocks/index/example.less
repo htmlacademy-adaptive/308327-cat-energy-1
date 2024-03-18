@@ -4,7 +4,7 @@
   background-color: @grey;
 
   @media (min-width: @tablet-width) {
-    padding-top: 45px;
+    padding-top: 44px;
     padding-bottom: 0;
     background-color: @white;
   }
@@ -37,14 +37,14 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 110px;
+    column-gap: 100px;
     background-color: @basic-grey;
   }
 }
 
 .example__content {
   @media (min-width: @tablet-width) {
-    padding-bottom: 250px;
+    padding-bottom: 236px;
   }
 
   @media (min-width: @desktop-width) {
@@ -56,14 +56,14 @@
 
 .example__description {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -75,7 +75,7 @@
 
 .example__progress-table {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 100%;
 
   @media (min-width: @desktop-width) {
@@ -102,14 +102,14 @@
 
   @media (min-width: @tablet-width) {
     &:not(:first-child) {
-      margin-left: 43px;
+      margin-left: 41px;
     }
   }
 
   &:last-child {
     grid-column: 1 / -1;
     justify-self: center;
-    margin-top: 39px;
+    margin-top: 31px;
 
     @media (min-width: @tablet-width) {
       margin: 0;
@@ -118,7 +118,7 @@
 
     @media (min-width: @desktop-width) {
       margin: 0;
-      margin-top: 55px;
+      margin-top: 58px;
     }
   }
 }
@@ -130,13 +130,14 @@
   min-width: 124px;
   font-size: 24px;
   font-weight: 400;
+  text-transform: uppercase;
   outline: 1px solid @light-telegrey;
   border-radius: 3px;
 
   @media (min-width: @tablet-width) {
-    min-width: 162px;
+    min-width: 159px;
     padding-top: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     font-size: 30px;
     line-height: 37px;
   }
@@ -165,8 +166,7 @@
 
   @media (max-width: @mobile-width-only) {
     width: 87px;
-    bottom: -10px;
-    letter-spacing: 0.4px;
+    bottom: -14px;
   }
 
   @media (min-width: @tablet-width) {
@@ -180,16 +180,21 @@
 }
 
 .example__progress-table-data--weight {
+  @media (max-width: @mobile-width-only) {
+    width: 81px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 114px;
-    left: 24px;
+    left: 23px;
+    bottom: -5px;
   }
 }
 
 .example__progress-table-data--time {
   @media (min-width: @tablet-width) {
     width: 142px;
-    left: 12px;
+    left: 10px;
   }
 }
 
@@ -209,12 +214,18 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    min-width: 330px;
+    min-width: 327px;
   }
 }
 
 .example__progress-table-cost {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
   @media (min-width: @desktop-width) {
+    margin-top: 0;
     margin-left: auto;
   }
 }
@@ -254,6 +265,8 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     background-color: transparent;
+    left: 0;
+    bottom: 85px;
   }
 
   &::before {
@@ -328,8 +341,12 @@
   border-radius: 2px;
   background-color: @slider-curtain;
   position: relative;
-  left: 50%;
+  left: 138px;
   z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    left: 49.65%;
+  }
 
   &:hover {
     background-color: @green;
@@ -358,19 +375,29 @@
 }
 
 .example__slider-toggle {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background-color: @white;
   border-radius: 50%;
   outline: 2px solid @slider-curtain;
   position: absolute;
-  top: 42%;
-  left: -18px;
+  top: 110px;
+  left: -16px;
+
+  @media (min-width: @tablet-width) {
+    top: 46.5%;
+  }
 }
 
 .example__slider-toggle-img {
   position: absolute;
-  top: 11px;
-  left: 8px;
+  top: 9px;
+  left: 6px;
   fill: @slider-curtain;
+}
+
+.example__word-wrap {
+  @media (max-width: @desktop-width) {
+    display: none;
+  }
 }

@@ -81,7 +81,7 @@ const optimizeSvg = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
   .pipe(svgo())
   .pipe(cheerio({
@@ -159,10 +159,6 @@ export const build = gulp.series(
     scripts,
     sprite,
     createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
   )
 );
 
@@ -171,13 +167,13 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  copyImages,
-  sprite,
+  optimizeImages,
+  optimizeSvg,
   gulp.parallel(
     styles,
     html,
     scripts,
-    optimizeSvg,
+    sprite,
     createWebp
   ),
   gulp.series(
