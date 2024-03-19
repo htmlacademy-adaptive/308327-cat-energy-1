@@ -159,20 +159,105 @@
   padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 20px 24px;
+    padding: 10px 20px;
     position: absolute;
     top: -62px;
   }
-}
 
-.catalog__product-img-link--1000g {
-  @media (min-width: @tablet-width) {
-    top: -76px;
+  &--chicken-1000g {
+    @media (min-width: @tablet-width) {
+      top: -79px;
+    }
+  }
+
+  &--buckwheat-1000g,
+  &--fish-1000g {
+    @media (min-width: @tablet-width) {
+      top: -76px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -74px;
+    }
+  }
+
+
+  &--chicken-500g,
+  &--buckwheat-500g {
+    @media (min-width: @tablet-width) {
+      top: -62px;
+    }
+  }
+
+  &--fish-500g,
+  &--rice-500g {
+    @media (min-width: @tablet-width) {
+      top: -63px;
+    }
   }
 }
 
 .catalog__product-img {
   width: 100%;
+
+  &--chicken-500g {
+    @media (min-width: @tablet-width) {
+      width: 161px;
+      height: 172px;
+    }
+  }
+
+  &--chicken-1000g {
+    @media (min-width: @tablet-width) {
+      width: 168px;
+      height: 206px;
+    }
+  }
+
+  &--fish-500g {
+    @media (min-width: @tablet-width) {
+      width: 163px;
+      height: 174px;
+    }
+  }
+
+  &--fish-1000g {
+    @media (min-width: @tablet-width) {
+      width: 168px;
+      height: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 172px;
+      height: 196px;
+    }
+  }
+
+  &--buckwheat-500g {
+    @media (min-width: @tablet-width) {
+      width: 161px;
+      height: 171px;
+    }
+  }
+
+  &--buckwheat-1000g {
+    @media (min-width: @tablet-width) {
+      width: 168px;
+      height: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 172px;
+      height: 196px;
+    }
+  }
+
+  &--rice-500g {
+    @media (min-width: @tablet-width) {
+      width: 163px;
+      height: 174px;
+    }
+  }
 }
 
 .catalog__product-table {
@@ -188,7 +273,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 31px;
+    margin-bottom: 26px;
   }
 }
 
@@ -198,14 +283,20 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     margin-bottom: 7px;
-    border-bottom: 1px solid @light-telegrey;
+    box-shadow: 0 1px 0 0 @light-telegrey;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 4px;
-    margin-bottom: 7px;
+    &:nth-child(2) {
+      padding-bottom: 7px;
+      margin-bottom: 5px;
+    }
+
+    &:nth-child(3) {
+      padding-bottom: 10px;
+    }
   }
 }
 
