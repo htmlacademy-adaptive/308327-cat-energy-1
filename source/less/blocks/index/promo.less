@@ -6,7 +6,7 @@
   &::after {
     content: "";
     width: 100%;
-    height: 302px;
+    min-height: 302px;
     position: absolute;
     top: 0;
     left: 0;
@@ -135,6 +135,8 @@
   display: block;
 
   @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -142,6 +144,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
     left: 447px;
     bottom: 52px;
   }
@@ -264,7 +268,7 @@
 }
 
 .promo__product-slim-img,
-.promo_product-pro-img {
+.promo__product-pro-img {
   position: relative;
 }
 
@@ -273,27 +277,35 @@
   left: 7px;
 
   @media (min-width: @tablet-width) {
+    width: 140px;
+    height: 194px;
     top: -11px;
     left: 30px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 97px;
     top: -6px;
     left: 15px;
   }
 }
 
-.promo_product-pro-img {
+.promo__product-pro-img {
   max-width: 268px;
   top: 11px;
   left: -7px;
 
   @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 112px;
     top: 44px;
     left: -34px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 56px;
     top: 20px;
     left: -19px;
   }

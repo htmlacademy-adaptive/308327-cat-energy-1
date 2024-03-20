@@ -79,6 +79,15 @@
   position: absolute;
   top: 0;
   z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .find-us__location {
