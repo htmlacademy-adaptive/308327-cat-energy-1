@@ -218,7 +218,11 @@
       top: 15px;
 
       @media (min-width: @tablet-width) {
-        top: 22px;
+        top: 23px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 24px;
       }
     }
   }
@@ -264,6 +268,7 @@
   text-transform: uppercase;
   border: none;
   outline: 1px solid @platinum;
+  appearance: textfield;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -449,25 +454,39 @@
 
 .program__form-label--email {
   &::after {
-    width: 17px;
-    height: 13px;
+    width: 18px;
+    height: 14px;
     background-image: url("../img/form-mail.svg");
     top: 15px;
-    right: 14px;
+    right: 13px;
 
     @media (min-width: @tablet-width) {
-      top: 20px;
+      top: 19px;
       right: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 17px;
     }
   }
 }
 
 .program__form-label--phone {
   &::after {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     background-image: url("../img/form-phone.svg");
-    right: 14.5px;
+    top: 14px;
+    right: 14px;
+
+    @media (min-width: @tablet-width) {
+      top: 18px;
+      right: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 17px;
+    }
   }
 }
 
@@ -482,14 +501,14 @@
 }
 
 .program__form-textarea-container {
-  padding: 38px 0 20px;
+  padding: 38px 0 22px;
 
   @media (min-width: @tablet-width) {
-    padding: 87px 41px 60px;
+    padding: 86px 41px 63px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 78px 0 65px;
+    padding: 77px 0 68px;
   }
 }
 
@@ -499,6 +518,7 @@
   resize: none;
   border: none;
   outline: 1px solid @platinum;
+  outline-offset: -1px;
 
   &:hover {
     outline-color: @light-telegrey;
@@ -536,7 +556,7 @@
   padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    padding: 57px 40px 51px 40px;
+    padding: 58px 40px 51px 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
@@ -544,7 +564,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 57px 0 59px;
+    padding: 58px 0 59px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
   }
