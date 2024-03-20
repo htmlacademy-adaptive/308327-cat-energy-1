@@ -167,7 +167,7 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   optimizeSvg,
   gulp.parallel(
     styles,
