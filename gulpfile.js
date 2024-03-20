@@ -41,5 +41,19 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  clean,
+  copy,
+
+  optimizeSvg,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
 );
