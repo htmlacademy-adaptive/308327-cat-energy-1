@@ -1,7 +1,17 @@
 .find-us {
-  @media (min-width: @desktop-width) {
-    position: relative;
+  background-color: @white;
+
+  &--background {
+    background-color: @basic-grey;
+
+    @media (min-width: @desktop-width) {
+      background-color: unset;
+    }
   }
+}
+
+.find-us__inner {
+  position: relative;
 }
 
 .find-us__address-wrapper {
@@ -9,10 +19,6 @@
   padding-bottom: 26px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
-  &--background {
-    background-color: @basic-grey;
-  }
 
   @media (min-width: @tablet-width) {
     padding: 61px 70px 60px;

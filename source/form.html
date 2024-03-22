@@ -15,40 +15,40 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
-  <div class="page__container">
-    <header class="main-header page__container-inner">
-      <div class="main-header__menu-container">
-        <a class="main-header__logo" href="index.html" title="Cайт «CAT Energy»">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
-          </picture>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/company-name.svg">
-            <img class="main-header__company-img" src="img/company-name.svg" width="101" height="18"
-              alt="Название компании «CAT Energy»">
-          </picture>
-        </a>
-        <button class="main-header__menu-btn main-header__menu-btn--opened main-header__menu-btn--nojs" type="button">
-          <span class="visually-hidden">Закрыть меню навигации</span>
-        </button>
-      </div>
-      <nav class="main-header__navigation main-header__navigation--closed main-header__navigation--nojs main-header__navigation--form">
-        <ul class="main-header__navigation-list main-header__navigation-list--nojs">
-          <li class="main-header__navigation-item">
-            <a class="main-header__navigation-link" href="index.html">Главная</a>
-          </li>
-          <li class="main-header__navigation-item">
-            <a class="main-header__navigation-link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-header__navigation-item">
-            <a class="main-header__navigation-link  main-header__navigation-link--current">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main-form">
+  <header class="main-header page__container page__container-inner">
+    <div class="main-header__menu-container">
+      <a class="main-header__logo" href="index.html" title="Cайт «CAT Energy»">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/company-name.svg">
+          <img class="main-header__company-img" src="img/company-name.svg" width="101" height="18"
+            alt="Название компании «CAT Energy»">
+        </picture>
+      </a>
+      <button class="main-header__menu-btn main-header__menu-btn--opened main-header__menu-btn--nojs" type="button">
+        <span class="visually-hidden">Закрыть меню навигации</span>
+      </button>
+    </div>
+    <nav class="main-header__navigation main-header__navigation--closed main-header__navigation--nojs main-header__navigation--form">
+      <ul class="main-header__navigation-list main-header__navigation-list--nojs">
+        <li class="main-header__navigation-item">
+          <a class="main-header__navigation-link" href="index.html">Главная</a>
+        </li>
+        <li class="main-header__navigation-item">
+          <a class="main-header__navigation-link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-header__navigation-item">
+          <a class="main-header__navigation-link  main-header__navigation-link--current">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-form">
+    <div class="page__container">
       <h1 class="visually-hidden">Свяжитесь с нами.</h1>
       <section class="program page__container-inner">
         <h2 class="program__title title-page">Подбор программы</h2>
@@ -140,9 +140,11 @@
           </div>
         </form>
       </section>
-      <section class="find-us">
+    </div>
+    <section class="find-us find-us--background">
+      <div class="find-us__inner page__container">
         <h2 class="visually-hidden">Как нас найти.</h2>
-        <div class="find-us__address-wrapper find-us__address-wrapper--background page__container-inner">
+        <div class="find-us__address-wrapper page__container-inner">
           <h3 class="find-us__address-title">Приглашаем <br>к сотрудничеству дилеров!</h3>
           <address class="find-us__address">ул. Большая Конюшенная, д. 19/8
             <span class="find-us__address-city">Санкт-Петербург</span>
@@ -165,9 +167,9 @@
               </picture>
             </noscript>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+  </main>
   <footer class="main-footer">
     <div class="main-footer__container-inner page__container page__container-inner">
       <a class="main-footer__company-link" href="#">

@@ -2,14 +2,15 @@
   position: relative;
   z-index: 1;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     width: 100%;
     min-height: 302px;
     position: absolute;
     top: 0;
-    left: 0;
+    background-color: @green;
+    opacity: 0.85;
+    z-index: -1;
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -17,71 +18,75 @@
 
     @media (min-width: @desktop-width) {
       display: block;
+      width: 50%;
+      min-height: 694px;
+      left: 50%;
     }
   }
 
+  @media (min-width: @desktop-width) {
+    position: static;
+
+    &::after {
+      content: "";
+      width: 100%;
+      min-height: 694px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -2;
+      background-image: image-set(
+        url("../img/promo-cat-desktop.jpg"),
+        url("../img/promo-cat-desktop.webp"));
+      background-size: 720px auto;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: image-set(
+          url("../img/promo-cat-desktop@2x.jpg"),
+          url("../img/promo-cat-desktop@2x.webp"));
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.promo__container-inner {
+  position: relative;
+
   &::before {
+    content: "";
+    width: 100%;
+    min-height: 302px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-image: image-set(
       url("../img/promo-cat-mobile.webp"),
-      url("../img/promo-cat-mobile.jpg")
-    );
+      url("../img/promo-cat-mobile.jpg"));
     background-repeat: no-repeat;
     z-index: -2;
 
     @media (min-resolution: 2dppx) {
       background-image: image-set(
         url("../img/promo-cat-mobile@2x.webp"),
-        url("../img/promo-cat-mobile@2x.jpg")
-      );
+        url("../img/promo-cat-mobile@2x.jpg"));
       background-size: cover;
     }
-  }
 
-  &::after {
-    background-color: @green;
-    opacity: 0.85;
-    z-index: -2;
-  }
-
-  @media (min-width: @tablet-width) {
-    background-color: @white;
-  }
-
-  @media (min-width: @desktop-width) {
-    position: static;
-    background-color: transparent;
-
-    &::before,
-    &::after {
-      width: 50%;
-      height: 694px;
-      left: 50%;
-    }
-
-    &::before {
-      background-image: image-set(
-        url("../img/promo-cat-desktop.jpg"),
-        url("../img/promo-cat-desktop.webp")
-      );
-      background-size: 720px auto;
-
-      @media (min-resolution: 2dppx) {
-        background-image: image-set(
-          url("../img/promo-cat-desktop@2x.jpg"),
-          url("../img/promo-cat-desktop@2x.webp")
-        );
-      }
+    @media (min-width: @tablet-width) {
+      display: none;
     }
   }
 }
 
 .promo__title-wrapper {
-  padding-top: 27px;
+  padding-top: 25px;
   padding-bottom: 20px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 60px 200px 526px 90px;
-    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -103,7 +108,7 @@
 }
 
 .promo__title {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   font-size: 36px;
   line-height: 36px;
 
@@ -115,7 +120,7 @@
 }
 
 .promo__slogan {
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -147,7 +152,7 @@
     width: 552px;
     height: 499px;
     left: 447px;
-    bottom: 52px;
+    top: 24px;
   }
 }
 

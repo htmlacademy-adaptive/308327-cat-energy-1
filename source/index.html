@@ -15,42 +15,42 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <div class="page__container">
-      <header class="main-header page__container-inner">
-        <div class="main-header__menu-container">
-          <a class="main-header__logo" href="#" title="Cайт «CAT Energy»">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
-            </picture>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/company-name.svg">
-              <img class="main-header__company-img" src="img/company-name.svg" width="101" height="18" alt="Название компании «CAT Energy»">
-            </picture>
-          </a>
-          <button class="main-header__menu-btn main-header__menu-btn--opened main-header__menu-btn--nojs" type="button">
-            <span class="visually-hidden">Закрыть меню навигации</span>
-          </button>
-        </div>
-        <nav class="main-header__navigation main-header__navigation--closed main-header__navigation--nojs">
-          <ul class="main-header__navigation-list main-header__navigation-list--nojs">
-            <li class="main-header__navigation-item">
-              <a class="main-header__navigation-link main-header__navigation-link--current
-              main-header__navigation-link--color-white">Главная</a>
-            </li>
-            <li class="main-header__navigation-item">
-              <a class="main-header__navigation-link main-header__navigation-link--color-white" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-header__navigation-item">
-              <a class="main-header__navigation-link main-header__navigation-link--color-white" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main class="main-index">
-        <h1 class="visually-hidden">Сайт подбора правильного питания для Вашего кота.</h1>
-        <section class="promo page__container-inner">
+    <header class="main-header page__container page__container-inner">
+      <div class="main-header__menu-container">
+        <a class="main-header__logo" href="#" title="Cайт «CAT Energy»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта «CAT Energy»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/company-name.svg">
+            <img class="main-header__company-img" src="img/company-name.svg" width="101" height="18" alt="Название компании «CAT Energy»">
+          </picture>
+        </a>
+        <button class="main-header__menu-btn main-header__menu-btn--opened main-header__menu-btn--nojs" type="button">
+          <span class="visually-hidden">Закрыть меню навигации</span>
+        </button>
+      </div>
+      <nav class="main-header__navigation main-header__navigation--closed main-header__navigation--nojs">
+        <ul class="main-header__navigation-list main-header__navigation-list--nojs">
+          <li class="main-header__navigation-item">
+            <a class="main-header__navigation-link main-header__navigation-link--current
+            main-header__navigation-link--color-white">Главная</a>
+          </li>
+          <li class="main-header__navigation-item">
+            <a class="main-header__navigation-link main-header__navigation-link--color-white" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-header__navigation-item">
+            <a class="main-header__navigation-link main-header__navigation-link--color-white" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-index">
+      <h1 class="visually-hidden">Сайт подбора правильного питания для Вашего кота.</h1>
+      <section class="promo">
+        <div class="promo__container-inner page__container page__container-inner">
           <div class="promo__title-wrapper">
             <h2 class="promo__title">Функциональное питание для котов</h2>
             <h3 class="promo__slogan">Занялся собой? Займись котом!</h3>
@@ -97,36 +97,38 @@
               <a class="promo__catalog-link promo__catalog-link--pro" href="catalog.html">Каталог PRO</a>
             </li>
           </ul>
-        </section>
-        <section class="features page__container-inner">
-          <h2 class="features__title">Как это работает </h2>
-          <ul class="features__list">
-            <li class="features__item">
-              <p class="features__description features__description--leaf">
-                Функциональное питание содержит только полезные питательные вещества.
-              </p>
-            </li>
-            <li class="features__item">
-              <p class="features__description features__description--water">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-              </p>
-            </li>
-            <li class="features__item">
-              <p class="features__description features__description--eat">
-                Замените один-два приема обычной еды на наше функциональное питание.
-              </p>
-            </li>
-            <li class="features__item">
-              <p class="features__description features__description--clock">
-                Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br class="features__word-wrap"> вашего питомца!
-              </p>
-            </li>
-          </ul>
-        </section>
-        <section class="example">
-          <h2 class="example__title page__container-inner">Живой пример</h2>
+        </div>
+      </section>
+      <section class="features page__container page__container-inner">
+        <h2 class="features__title">Как это работает </h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <p class="features__description features__description--leaf">
+              Функциональное питание содержит только полезные питательные вещества.
+            </p>
+          </li>
+          <li class="features__item">
+            <p class="features__description features__description--water">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </p>
+          </li>
+          <li class="features__item">
+            <p class="features__description features__description--eat">
+              Замените один-два приема обычной еды на наше функциональное питание.
+            </p>
+          </li>
+          <li class="features__item">
+            <p class="features__description features__description--clock">
+              Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br class="features__word-wrap"> вашего питомца!
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="example">
+        <div class="page__container page__container-inner">
+          <h2 class="example__title">Живой пример</h2>
           <div class="example__content-wrapper">
-            <div class="example__content page__container-inner">
+            <div class="example__content">
               <p class="example__description">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат&nbsp;<br class="example__word-wrap"> без изнуряющих
                 тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
@@ -149,8 +151,7 @@
                 </tbody>
               </table>
             </div>
-            <div class="example__slider page__container-inner">
-              <div class="example__slider-inner">
+              <div class="example__slider">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slider-tablet.webp 1x, img/cat-slider-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/cat-slider-mobile.webp 1x, img/cat-slider-mobile@2x.webp 2x">
@@ -158,17 +159,19 @@
                   <img class="visually-hidden" src="img/cat-slider-mobile.png" width="280" height="256" alt="Кот ДО и ПОСЛЕ приёма корма" loading="lazy">
                 </picture>
                 <div class="example__slider-curtain">
+                  <span class="visually-hidden">Шторка слайдера для просмотра результата ДО и ПОСЛЕ замены корма кота на Cat Energy Slim.</span>
                   <div class="example__slider-toggle">
                     <svg class="example__slider-toggle-img" width="24" height="18">
-                      <use xlink:href="img/sprite.svg#slider-toggle-arrow"></use>
+                      <use xlink:href="img/sprite.svg#slider-toggle-arrow" aria-label="Изображение стрелок влево, вправо."></use>
                     </svg>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
-        </section>
-        <section class="find-us">
+        </div>
+      </section>
+      <section class="find-us">
+        <div class="find-us__inner page__container">
           <h2 class="visually-hidden">Как нас найти.</h2>
           <div class="find-us__address-wrapper page__container-inner">
             <h3 class="find-us__address-title">Приглашаем <br>к сотрудничеству дилеров!</h3>
@@ -179,22 +182,27 @@
           <div class="find-us__map-wrapper">
             <iframe class="find-us__location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5935846620862!2d30.320842622157315!3d59.93888576650249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1694534196035!5m2!1sru!2sru"
-              width="320" height="362" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+              width="320" height="362" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+              title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
             </iframe>
             <noscript>
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-                <img class="find-us__map-img" src="img/map-mobile.jpg" srcset="img/map-mobile.jpg 1x, img/map-mobile@2x.jpg 2x" width="320" height="362" alt="Местоположение на карте" loading="lazy">
+                <img class="find-us__map-img" src="img/map-mobile.jpg"
+                  srcset="img/map-mobile.jpg 1x, img/map-mobile@2x.jpg 2x" width="320" height="362"
+                  alt="Местоположение на карте" loading="lazy">
               </picture>
             </noscript>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+    </main>
     <footer class="main-footer">
       <div class="main-footer__container-inner page__container page__container-inner">
         <a class="main-footer__company-link" href="#">
