@@ -265,6 +265,7 @@
   width: 100%;
   font-family: inherit;
   font-size: inherit;
+  color: @dark-grey;
   text-transform: uppercase;
   border: none;
   outline: 1px solid @platinum;
@@ -416,7 +417,7 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     padding-top: 76px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
@@ -439,7 +440,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -501,20 +504,26 @@
 }
 
 .program__form-textarea-container {
-  padding: 38px 0 22px;
+  padding: 38px 0 21px;
 
   @media (min-width: @tablet-width) {
-    padding: 86px 41px 63px;
+    padding: 86px 41px 62px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 77px 0 68px;
+    padding: 77px 0 67px;
   }
 }
 
 .program__form-textarea {
   padding: 14px 14px 14px 15px;
   width: 100%;
+  height: 150px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: @dark-grey;
+  text-transform: uppercase;
   resize: none;
   border: none;
   outline: 1px solid @platinum;
@@ -529,8 +538,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 11px 20px;
-    min-height: 175px;
+    padding: 12px 20px;
+    min-height: 176px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {

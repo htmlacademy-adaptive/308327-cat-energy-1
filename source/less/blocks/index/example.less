@@ -5,12 +5,28 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 44px;
-    padding-bottom: 0;
+    padding-bottom: 101px;
     background-color: @white;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 462px;
+      background-color: @grey;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+
+      @media (min-width: @desktop-width) {
+        background-color: @basic-grey;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 0;
+    padding: 0;
+    padding-bottom: 26px;
   }
 }
 
@@ -28,29 +44,36 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
+    margin: 0;
     grid-column: ~"1 / 2";
   }
 }
 
 .example__content-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
-    background-color: @basic-grey;
+    column-gap: 220px;
   }
 }
 
 .example__content {
   @media (min-width: @tablet-width) {
-    padding-bottom: 236px;
+    padding-bottom: 84px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 70px;
+    padding-top: 96px;
     padding-bottom: 0;
     grid-column: ~"1 / 2";
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -231,20 +254,18 @@
 }
 
 .example__slider {
+  width: 280px;
+  height: 256px;
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    padding: 231px 104px;
-    background-color: @grey;
-    position: relative;
+    width: 560px;
+    height: 512px;
   }
 
   @media (min-width: @desktop-width) {
-    background-color: transparent;
+    bottom: 59px;
   }
-}
-
-.example__slider-inner {
-  height: 256px;
-  position: relative;
 
   &::before,
   &::after {
@@ -252,21 +273,6 @@
     height: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 560px;
-    height: 512px;
-    position: absolute;
-    bottom: 101px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    background-color: transparent;
-    left: 0;
-    bottom: 85px;
   }
 
   &::before {
@@ -290,6 +296,7 @@
         url("../img/example-fat-cat-2@1x.webp"),
         url("../img/example-fat-cat-2@1x.png")
       );
+      z-index: 2;
 
       @media (min-resolution: 2dppx) {
         background-image: image-set(
@@ -323,6 +330,7 @@
         url("../img/example-slim-cat-2@1x.webp"),
         url("../img/example-slim-cat-2@1x.png")
       );
+      z-index: 2;
 
       @media (min-resolution: 2dppx) {
         background-image: image-set(
@@ -340,8 +348,9 @@
   height: 100%;
   border-radius: 2px;
   background-color: @slider-curtain;
-  position: relative;
+  position: absolute;
   left: 138px;
+  top: 0;
   z-index: 3;
 
   @media (min-width: @tablet-width) {
